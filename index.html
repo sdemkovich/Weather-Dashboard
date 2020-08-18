@@ -4,58 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="style.css">
-    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7dd83c9a29.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Montserrat&display=swap" rel="stylesheet">
+    <title>Weather Dashboard</title>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <span class="navbar-brand mb-0 mx-auto h1" id="navbar">Weather Dashboard</span>                   
-  </nav>
-      <!-- Weather Forms -->
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-            <form class="form-inline">
-                <h3>Search for City:</h3>
-                <input class="form-control mr-sm-2" type="search" id="input-city" placeholder="" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-button">Search</button>
-              </form>
-              <ul class="list-group">
-                <li class="list-group-item">Cras justo odio</li>
-                <li class="list-group-item">Dapibus ac facilisis in</li>
-                <li class="list-group-item">Morbi leo risus</li>
-                <li class="list-group-item">Porta ac consectetur ac</li>
-                <li class="list-group-item">Vestibulum at eros</li>
-              </ul>
-            </div>
-        
-            <div class="col-8">
-                <div class="card">
-                    <div class="card-body">
-                      <div class = "city"></div>
-                      <div class = "temperature"></div>
-                      <div class = "humidity"></div>
-                      <div class = "wind speed"></div>
-                      <div class = "Uv Index"></div>
-                      
+    <header class="container-fluid bg-dark text-white justify-content-center">
+        <div class="row justify-content-center dashboard-header">
+            <h1>Weather Dashboard</h1>
+        </div>
+    </header>
+
+    <main class="container-fluid h-100">
+        <div class="row h-100">
+
+            <!-- Left hand column container to Search for a City where city buttons will be added -->
+            <div class="col-3 bg-light">
+                <form>
+                    <label for="city-search" class="city-search-title">Search for a City</label>
+                    <div class="row">
+                        <input type="city" class="form-control" id="city-search" placeholder="e.g. Seattle">
+                        <button type="submit" class="btn btn-primary city-search-button" data="search"><i class="fas fa-search"></i></button>
                     </div>
-                    
-                  </div>
-                  <h2>5 Days Forecast:</h2>
+                </form> 
+
+                <!-- New buttons will be created here from script.js -->
+                <div id="add-buttons-here">
+                </div>
+                
             </div>
-          </div>
 
-    </div>
+            <!-- Right hand column container that displays city information -->
+            <div class="col-9" id="weather-information" style="display: none">
+                <div class="row">
+                    <div class="container city-display">
+                        <h3 id="city-name">City</h3>
+                        <p id="city-temp"> </p>
+                        <p id="city-humidity">Humidity: </p>
+                        <p id="city-wind">Wind Speed: </p>
+                        <label>UV Index:</label>
+                        <label id="city-uv" class="text-white">9.49</label>
+                    </div>
+                </div>
 
+                <div class="row">
+                    <div class="container forecast-display">
+                        <h3>5-Day Forecast:</h3>
+                        <br>
+                    </div>
+                </div>
 
+                <!-- New forecast divs will be created here by script.js -->
+                <div class="row forecast-row">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

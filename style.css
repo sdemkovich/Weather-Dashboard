@@ -1,11 +1,79 @@
-#navbar {
-font-size: 35px;
-}
-.container {
-    margin-left: 10px;
-    margin-right: 10px;
+html,body {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.form-inline {
-    margin-bottom: 20px;
+.dashboard-header {
+    height: 80px;
+    background-color: rgb(145, 43, 179);
+}
+
+.dashboard-header h1 {
+    line-height: 72px;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+#city-search {
+    width: 65%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+
+.city-search-button {
+    height: 50%;
+    width: 20%;
+}
+
+.city-search-title {
+    margin-top: 5px;
+    font-weight: bold;
+    margin-left: 5%;
+}
+
+.btn-primary{
+    background-color: rgb(99, 45, 99);
+}
+
+.btn-light {
+    margin-left: 5%;
+    width: 95%;
+    border: 1px solid rosybrown;
+}
+
+#city-uv {
+    text-align: center;
+    width: 6%;
+    border-radius: 20%;
+}
+
+.city-display {
+    border: 1px solid lightgray;
+    width: 95%;
+    margin: 2% auto;
+}
+
+.city-display h3 {
+    padding-top: 15px;
+    font-weight: bold;
+}
+#city-temp{
+    font-size: 70px;
+    font-weight: bolder;
+    color: rgb(99, 38, 99);
+}
+
+.forecast-display {
+    width: 98%;
+}
+
+.forecast-box {
+    margin-left: 3%;
+    margin-bottom: 5%;
+    border-radius: 5%;
+    padding-top: 1%;
+    font-size: 14px;
+}
+.forecast-box.bg-primary {
+    background-color: rgb(193, 62, 193) !important;
 }
