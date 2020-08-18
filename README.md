@@ -29,6 +29,7 @@ When the user searches for a city, it is added to their search history and a but
 * Open Weather Maps API
 * Moment.js
 
+![gif](weather.gif)
 
 ## Questions
 ​
