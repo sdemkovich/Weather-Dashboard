@@ -6,6 +6,7 @@ html,body {
 .dashboard-header {
     height: 80px;
     background-color: rgb(145, 43, 179);
+    margin-bottom: 10px;
 }
 
 .dashboard-header h1 {
